@@ -23,28 +23,28 @@ export class HomeComponent implements OnInit{
 
   bannerData(){
     this.service.bannerApiData().subscribe((result) => {
-      console.log(result, 'bannerresult#');
+      console.log(result, 'Resultados do Banner');
       this.bannerResult = result.results;
     })
   }
 
   trendingData(){
     this.service.trendingMovieApiData().subscribe((result) => {
-      console.log(result, 'trendingresult#');
+      console.log(result, 'Rusultados filmes em alta');
       this.trendingMovieResult = result.results;
     })
   }
 
   trendingTvData(){
     this.service.trendingTvApiData().subscribe((result) => {
-      console.log(result, 'trendingtvresult#');
+      console.log(result, 'Resultados de séries em alta');
       this.trendingTvResult = result.results;
     })
   }
 
   popularApiData(){
     this.service.popularApiData().subscribe((result) => {
-      console.log(result, 'popularresult#');
+      console.log(result, 'Resultado dos mais populares');
       this.popularResult = result.results;
     })
   }
