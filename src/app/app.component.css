@@ -1,11 +1,11 @@
 .navbar .navbar-brand{
-    color: red;
+    color: cyan;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: red;
+    color: cyan;
     -webkit-text-stroke-width: 0,2px;
     -webkit-text-stroke-color: black;
 }
