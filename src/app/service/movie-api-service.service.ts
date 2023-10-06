@@ -31,4 +31,8 @@ export class MovieApiServiceService {
   popularApiData():Observable<any>{
     return this.http.get(`${this.baseurl}/tv/top_rated?api_key=${this.apikey}`)
   }
+
+  searchMovieData(data:any):Observable<any>{
+    return this.http.get(`${this.baseurl}/search/movie?api_key=${this.apikey}&query=${data.movieName}`)
+  }
 }

@@ -1,7 +1,31 @@
 <app-navbar></app-navbar>
-<div class="contain mt-5">
-    <p>Search works!</p>
+<div class="contain mt-5 p-2">
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()"> 
+        <div class="row">
+            <div class="mb-3 col-lg-10">
+                <input type="text" class="form-control" formControlName="movieName" placeholder="Busque aqui seu filme">
+            </div>  
 
+            <div class="col-lg-2">
+                <button class="btn btn-md">Pesquisar </button>
+            </div>
+        </div>
+    </form>
+
+    <div class="row mt-5">
+        <div class="col-lg-4" *ngFor="let s of searchResult">
+            <div class="row">
+                <div class="col-lg-3" *ngIf="s.poster_path">
+                    <img src="https://image.tmdb.org/t/p/original/{{s.poster_path }}">
+                </div>
+                <div class="col-lg-9">
+                    <h1>{{s.original_title}}</h1>
+                    <p>{{s.overview}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 <app-root></app-root>

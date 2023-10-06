@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,8 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
   navbg:any;
+  
+  @Input() nomeUsuario: string = ""; 
   @HostListener('document:scroll') scrollover(){
     console.log(document.body.scrollTop, 'scrolllength#')
 

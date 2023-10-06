@@ -11,6 +11,8 @@ import { MovieApiServiceService } from './service/movie-api-service.service';
 import { LoginComponent } from './pages/login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,8 @@ import { NavbarComponent } from './component/navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [MovieApiServiceService],
   bootstrap: [AppComponent]
